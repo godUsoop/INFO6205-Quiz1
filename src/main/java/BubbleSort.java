@@ -10,6 +10,23 @@ public class BubbleSort {
      */
     public void sort (Comparable[] a){
 //        write your code here.
+        int w = -1;
+        while (true) {
+            int x = 0;
+            boolean swap = false;
+            while (x < a.length - 1 && x + 1 != w) {
+                if (a[x].compareTo(a[x + 1]) > 0) {
+                    swap(a, x, x + 1);
+                    swap = true;
+                }
+                x ++;
+            }
+
+            if (!swap) {
+                break;
+            }
+            w = x;
+        }
 
     }
     /**
